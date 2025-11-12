@@ -34,7 +34,8 @@ int main() {
     do {
         printf("\n* * * * * * * * * * * * * * * * * * *\n");
         printf("\n          MONTAGEM DA TORRE          \n");
-        printf("\n * * * intens na mochila: %d/%d * * *\n", total, MAX_COMP);
+        printf("\n       intens na mochila: %d/%d      \n", total, MAX_COMP);
+        printf("\n* * * * * * * * * * * * * * * * * * *\n");
         printf("1. Adicionar itens na mochila\n");
         printf("2. Retirar itns na mochila\n");
         printf("3. Organizar e visualizar Mochila\n");
@@ -153,7 +154,7 @@ void removerComponentes(Componente comp[], int *n) {
         }
 
         (*n)--; // diminui o total de componentes
-        printf("Componente removido com sucesso!\n");
+        printf("\nComponente removido com sucesso!\n");
     }
 }
 
@@ -187,7 +188,7 @@ void mostrarComponentes(Componente comp[], int n) {
                 medirTempo(selectionSortPrioridade, comp, n, "Selection Sort (Prioridade)");
                 break;
             case 4:
-                printf("\n: : : : Lista Atual : : : :\n");
+                printf("\n * * * * * * LISTA ATUAL * * * * *\n");
                 for (int i = 0; i < n; i++) {
                     printf("%d. Nome: %-20s | Tipo: %-15s | Prioridade: %d\n", i + 1, comp[i].nome, comp[i].tipo, comp[i].prioridade);
                 }
